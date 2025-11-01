@@ -51,15 +51,15 @@ return {
 		})
 
 		require("lspconfig").clangd.setup({ capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}) })
-		-- require("lspconfig").zls.setup({
-		-- 	cmd = { "zls" },
-		-- 	capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
-		-- 	settings = {
-		-- 		zls = {
-		-- 			semantic_tokens = "partial",
-		-- 		},
-		-- 	},
-		-- })
+		require("lspconfig").zls.setup({
+			cmd = { "zls" },
+			capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
+			settings = {
+				zls = {
+					semantic_tokens = "partial",
+				},
+			},
+		})
 		--require("lspconfig").gopls.setup({ capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}) })
 		--require("lspconfig").ruff.setup({
 		--	capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
