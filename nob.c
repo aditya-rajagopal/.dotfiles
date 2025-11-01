@@ -13,8 +13,8 @@ typedef struct transfer_item_t {
 } transfer_item;
 
 static transfer_item items[] = {
-    {".clang-format", ".clang-format"},
-    {"nvim/", ".config/nvim/"},
+    {.src = ".clang-format", .dst = ""},
+    {.src = "nvim", .dst = ".config/"},
 };
 
 int main(int argc, char** argv) {
