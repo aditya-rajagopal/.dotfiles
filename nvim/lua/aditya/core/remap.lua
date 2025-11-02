@@ -83,11 +83,12 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", function()
-	vim.diagnostic.jump({ diagnostic = vim.diagnostic.get_prev() })
+	vim.diagnostic.jump({ count = -1, float = true })
 end)
 vim.keymap.set("n", "]d", function()
-	vim.diagnostic.jump({ diagnostic = vim.diagnostic.get_next() })
+	vim.diagnostic.jump({ count = 1, float = true })
 end)
+
 vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
 --
 ---- Use LspAttach autocommand to only map the following keys
@@ -150,3 +151,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- vim.api.nvim_create_autocmd("BufFilePre", {
+-- 	pattern = { "*.zig", "*.zon" },
+-- 	group = vim.api.nvim_create_augroup("aditya-zig-fmt", { clear = true }),
+-- 	desc = "Format zig files on save",
+-- 	callback = function(ev)
+-- 		vim.lsp.buf.format()
+-- 	end,
+-- })

@@ -36,7 +36,7 @@ return {
 		require("mason-lspconfig").setup({})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-		require("lspconfig").lua_ls.setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
 			server_capabilities = {
 				semanticTokensProvider = vim.NIL,
@@ -49,17 +49,21 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable("lua_ls", true)
 
-		require("lspconfig").clangd.setup({ capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}) })
-		require("lspconfig").zls.setup({
+		vim.lsp.config("clangd", { capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}) })
+		vim.lsp.enable("clangd", true)
+		vim.lsp.config("zls", {
 			cmd = { "zls" },
 			capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
 			settings = {
 				zls = {
 					semantic_tokens = "partial",
+					enable_build_on_save = true,
 				},
 			},
 		})
+		vim.lsp.enable("zls", true)
 		--require("lspconfig").gopls.setup({ capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}) })
 		--require("lspconfig").ruff.setup({
 		--	capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),

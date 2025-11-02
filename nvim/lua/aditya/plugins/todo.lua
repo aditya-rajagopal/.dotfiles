@@ -1,5 +1,6 @@
 return {
 	"folke/todo-comments.nvim",
+	dependencies = { "nvim-lua/plenary.nvim" },
 	lazy = false,
 	config = function()
 		-- TODO: This is a todo message.
@@ -35,7 +36,7 @@ return {
 			},
 			highlight = {
 				multiline = false,
-				pattern = [[(KEYWORDS)\s*(\([^\)]*\))?:]],
+				pattern = [[.*<(KEYWORDS)\s*(\([^\)]*\))?:]],
 				keyword = "wide_fg",
 				after = "",
 			},
