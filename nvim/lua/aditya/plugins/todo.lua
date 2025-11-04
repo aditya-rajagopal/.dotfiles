@@ -1,10 +1,11 @@
 return {
-	"folke/todo-comments.nvim",
+	"aditya-rajagopal/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	lazy = false,
 	config = function()
 		-- TODO: This is a todo message.
 		-- HACK: This is a hack.
+		-- @TODO @PERF
 		-- FIXME: This should really be fixed.
 		-- FIX:
 		-- BUG:
@@ -12,6 +13,7 @@ return {
 		-- NOTE: This is just a note.
 		-- INFO:
 		-- LEFTOFF: This is where I left off.
+		-- INCOMPLETE:
 		-- PERF: Performance improvements.
 		-- OPTIM:
 		-- OPTIMIZE:
@@ -32,11 +34,11 @@ return {
 				HACK = { color = "#F57D26" },
 				NOTE = { color = "#8DA101" },
 				FIX = { color = "#3A94C5" },
-				LEFTOFF = { color = "#F0F2D4" },
+				LEFTOFF = { color = "#F0F2D4", alt = { "INCOMPLETE" } },
 			},
 			highlight = {
 				multiline = false,
-				pattern = [[.*<(KEYWORDS)\s*(\([^\)]*\))?:]],
+				pattern = [[(KEYWORDS)\s*(\([^\)]*\))?:?]],
 				keyword = "wide_fg",
 				after = "",
 			},

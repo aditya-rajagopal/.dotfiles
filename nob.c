@@ -30,17 +30,19 @@ int main(int argc, char** argv) {
     char dst_buf[BUFFER_SIZE];
 
     // TODO: use async cmd_run() instead
+    Procs procs = {0};
     Cmd cmd = {0};
     for (size_t i = 0; i < NOB_ARRAY_LEN(items); ++i) {
         transfer_item item = items[i];
         snprintf(src_buf, BUFFER_SIZE, "%s/.dotfiles/%s", home, item.src);
         snprintf(dst_buf, BUFFER_SIZE, "%s/%s", home, item.dst);
         cmd_append(&cmd, "ln", "-sf", src_buf, dst_buf);
-        if (!cmd_run(&cmd)) {
+        if (!cmd_run(&cmd, .async = &procs, .max_procs = 8)) {
             nob_log(NOB_ERROR, "Could not create symlink %s -> %s", dst_buf, src_buf);
         }
         cmd.count = 0;
     }
+    procs_flush(&procs);
 
     return 0;
 }
