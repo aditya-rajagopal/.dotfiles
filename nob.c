@@ -15,6 +15,7 @@ typedef struct transfer_item_t {
 static transfer_item items[] = {
     {.src = ".clang-format", .dst = ""},
     {.src = "nvim", .dst = ".config/"},
+    {.src = ".zshrc", .dst = ""},
 };
 
 int main(int argc, char** argv) {
