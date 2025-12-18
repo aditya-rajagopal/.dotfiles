@@ -68,3 +68,5 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search   # Up Arrow
 bindkey "^[[B" down-line-or-beginning-search # Down Arrow
 
+export EDITOR=nvim
+export PATH="$PATH:$HOME/Programming/gila/zig-out/bin/"

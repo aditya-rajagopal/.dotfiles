@@ -35,6 +35,7 @@ return {
 				NOTE = { color = "#8DA101" },
 				FIX = { color = "#3A94C5" },
 				LEFTOFF = { color = "#F0F2D4", alt = { "INCOMPLETE" } },
+				IMPORTANT = { color = "#FDD017" },
 			},
 			highlight = {
 				multiline = false,
