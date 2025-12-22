@@ -33,5 +33,7 @@ return {
 			accept_line(completion_preview.on_accept_suggestion)
 		end, { desc = "Accept completion", noremap = true, silent = true })
 		vim.keymap.set("i", "<C-]>", completion_preview.on_dispose_inlay, { noremap = true, silent = true })
+		vim.keymap.set("i", "<C-S-CR>", completion_preview.on_accept_suggestion_word, { noremap = true, silent = true })
+		api.stop()
 	end,
 }

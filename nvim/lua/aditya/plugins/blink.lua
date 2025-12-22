@@ -1,5 +1,6 @@
 return {
 	"saghen/blink.cmp",
+	event = "VimEnter",
 	-- optional: provides snippets for the snippet source
 	dependencies = {
 		{
@@ -108,9 +109,6 @@ return {
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 
 		signature = { enabled = true },
-		providers = {
-			lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
-		},
 	},
 	opts_extend = { "sources.default" },
 }
