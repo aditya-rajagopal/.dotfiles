@@ -4,6 +4,7 @@ alias gs='git status'
 alias vi='nvim'
 
 autoload -Uz vcs_info
+source ~/.dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 precmd() {
     vcs_info
