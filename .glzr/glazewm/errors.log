@@ -1,0 +1,9 @@
+[2m2025-11-14T02:08:52.294669Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 259 column 15
+[2m2025-11-14T02:08:57.581918Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 259 column 15
+[2m2025-11-14T02:12:34.500186Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 259 column 15
+[2m2025-11-20T02:41:05.005720Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[5]: missing field `match` at line 177 column 5
+[2m2025-11-20T02:41:16.244816Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m found unknown escape character at line 160 column 35, while parsing a quoted scalar at line 160 column 34
+[2m2025-11-20T02:41:27.657028Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[5]: missing field `match` at line 177 column 5
