@@ -2,29 +2,35 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		-- local lualine_nightfly = require("lualine.themes.nightfly")
-		-- local new_colors = {
-		-- 	blue = "#65d1ff",
-		-- 	green = "3effdc",
-		-- 	violet = "#ff61ef",
-		-- 	yellow = "#ffda7b",
-		-- 	black = "#000000",
-		-- }
-		--
-		-- lualine_nightfly.normal.a.bg = new_colors.blue
-		-- lualine_nightfly.insert.a.bg = new_colors.green
-		-- lualine_nightfly.visual.a.bg = new_colors.violet
-		-- lualine_nightfly.command = {
-		-- 	a = {
-		-- 		gui = "bold",
-		-- 		bg = new_colors.yellow,
-		-- 		fg = new_colors.black,
-		-- 	},
-		-- }
 		require("lualine").setup({
+			sections = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = {
+					{
+						"branch",
+						fmt = function(str)
+							if str == "main" or str == "master" then
+								return ""
+							end
+							return str
+						end,
+					},
+					{ "filename", path = 1 },
+					"location",
+					"diagnostics",
+				},
+				lualine_x = {
+					{ "lsp_status", show_name = false, symbols = { done = "LSP connected" } },
+					"diff",
+					{ "datetime", style = "%H:%M:%S" },
+				},
+				lualine_y = {},
+				lualine_z = {},
+			},
 			options = {
-				-- theme = lualine_nightfly
-				theme = "everforest",
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
 			},
 		})
 	end,

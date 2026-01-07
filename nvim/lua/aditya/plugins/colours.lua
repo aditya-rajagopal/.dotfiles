@@ -67,8 +67,8 @@ return {
 			background = "hard",
 			transparent_background_level = 0,
 			ui_contrast = "high",
-			italics = true,
-			disable_italic_comments = false,
+			italics = false,
+			disable_italic_comments = true,
 			inlay_hints_background = "dimmed",
 		})
 		ColorMyPencils("everforest")

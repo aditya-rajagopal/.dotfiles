@@ -71,3 +71,4 @@ bindkey "^[[B" down-line-or-beginning-search # Down Arrow
 
 export EDITOR=nvim
 export PATH="$PATH:$HOME/Programming/gila/zig-out/bin/"
+export PATH="$HOME/.local/bin:$PATH"
