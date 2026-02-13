@@ -58,8 +58,10 @@ return {
 			capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
 			settings = {
 				zls = {
-					semantic_tokens = "partial",
+					-- semantic_tokens = "partial",
 					enable_build_on_save = true,
+					inlay_hints_show_variable_type_hints = true,
+					inlay_hints_show_struct_literal_field_type = true,
 				},
 			},
 		})

@@ -18,8 +18,7 @@ return {
 	config = function()
 		require("supermaven-nvim").setup({
 			color = {
-				suggestion_color = "#5a5a5a",
-				cterm = 244,
+				suggestion_color = "#080808",
 			},
 			disable_keymaps = true,
 		})

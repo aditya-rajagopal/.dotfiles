@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "tools": {
+    "bash": true,
+    "write": true,
+    "edit": true,
+    "read": true,
+    "grep": true,
+    "glob": true,
+    "gila": true,
+    "list": true,
+    "webfetch": true,
+    "todowrite": true,
+    "todoread": true,
+    "git": true,
+  },
+  "agent": {
+    "plan": {
+      "tools": {
+        "write": false,
+        "edit": false,
+      },
+    },
+  }
+}

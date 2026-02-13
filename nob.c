@@ -28,7 +28,10 @@ static transfer_item items[] = {
 static transfer_item items[] = {
     {.type = TYPE_FILE, .src = ".clang-format", .dst = ""},
     {.type = TYPE_DIRECTORY, .src = "nvim", .dst = ".config/"},
+    {.type = TYPE_DIRECTORY, .src = "ghostty", .dst = ".config/"},
+    {.type = TYPE_DIRECTORY, .src = "opencode", .dst = ".config/"},
     {.type = TYPE_FILE, .src = ".zshrc", .dst = ""},
+    {.type = TYPE_FILE, .src = ".aerospace.toml", .dst = ""},
 };
 #endif
 

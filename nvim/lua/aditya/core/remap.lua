@@ -15,7 +15,29 @@ vim.keymap.set("", "<leader>l", function()
 	end
 end, { desc = "Toggle lsp_lines" })
 
-vim.opt.guifont = "Berkeley Mono"
+vim.keymap.set("n", "<leader>i", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ 0 }), { 0 })
+end)
+
+if vim.g.neovide then
+	vim.g.neovide_scale_factor = 1.5
+	vim.api.nvim_set_keymap(
+		"n",
+		"<C-=>",
+		":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05<CR>",
+		{ silent = true }
+	)
+	vim.api.nvim_set_keymap(
+		"n",
+		"<C-->",
+		":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>",
+		{ silent = true }
+	)
+	vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1.5<CR>", { silent = true })
+	vim.g.neovide_scroll_animation_length = 0.01
+end
+
+vim.opt.guifont = { "Berkeley Mono", "JetBrainsMono Nerd Font Mono" }
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
