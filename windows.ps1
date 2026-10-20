@@ -17,6 +17,8 @@ $Items = @(
     @{ Source = 'nvim'; Destination = 'AppData\Local\nvim'; Directory = $true },
     @{ Source = '.glzr'; Destination = '.glzr'; Directory = $true },
     @{ Source = '.wezterm.lua'; Destination = '.wezterm.lua'; Directory = $false },
+    @{ Source = '.ai\AGENTS.md'; Destination = '.codex\AGENTS.md'; Directory = $false },
+    @{ Source = '.ai\AGENTS.md'; Destination = '.config\opencode\AGENTS.md'; Directory = $false },
     @{ Source = '.ai\skills'; Destination = '.codex\skills'; Directory = $true },
     @{ Source = '.ai\skills'; Destination = '.config\opencode\skills'; Directory = $true }
 )

@@ -11,7 +11,7 @@ Run `make` from this repository to build `nob` and install the configuration lin
 
 Adding or editing a skill in `.ai/skills` makes it available to both tools. Grill Me delegates to Grilling, which requires the question/user-input tool whenever usable. Old OpenCode skill and agent definitions have been removed; `opencode/skills` is a relative compatibility link for existing installations that link the whole OpenCode config directory.
 
-Setup replaces existing skills directories, including their previous contents, with the shared folder. Existing files, directories, and different links are moved to numbered paths under `~/.dotfiles-backups` first. Matching links are left alone. Backups remain outside skill discovery paths. Setup stops with a nonzero exit code on failure; already completed links are retained.
+Setup replaces existing destinations with links to the shared files and folders. Existing files, directories, and different links are moved to numbered paths under `~/.dotfiles-backups` first. Matching links are left alone. Backups remain outside skill discovery paths. Setup stops with a nonzero exit code on failure; already completed links are retained.
 
 ## Windows
 

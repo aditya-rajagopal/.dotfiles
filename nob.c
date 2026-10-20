@@ -18,6 +18,8 @@ static const Transfer_Item items[] = {
     {"ghostty", ".config/ghostty", true},
     {".zshrc", ".zshrc", false},
     {".aerospace.toml", ".aerospace.toml", false},
+    {".ai/AGENTS.md", ".codex/AGENTS.md", false},
+    {".ai/AGENTS.md", ".config/opencode/AGENTS.md", false},
     {".ai/skills", ".codex/skills", true},
     {".ai/skills", ".config/opencode/skills", true},
 };
